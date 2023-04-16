@@ -110,7 +110,7 @@ BOOL APIENTRY DllMain(HMODULE hModule,
 		TCHAR *Name = wcsrchr(FilePath, '\\');
 		TCHAR Proc1[] = L"\\WeChat.exe";
 		TCHAR Proc2[] = L"\\WXWork.exe";
-		TCHAR Proc3[] = L"\\DingTalk.exe";
+		TCHAR Proc3[] = L"\\SC2_x64.exe";
 			if (wcscmp(Name, Proc1)==0)
 			{
 				OldMutexName = (wchar_t*)L"_WeChat_App_Instance_Identity_Mutex_Name";
@@ -123,8 +123,8 @@ BOOL APIENTRY DllMain(HMODULE hModule,
 			}
 			else if(wcscmp(Name, Proc3) == 0)
 			{
-				OldMutexName = (wchar_t*)L"Local\\{{239B7D43-86D5-4E5C-ADE6-CEC42155B475}}DingTalk";
-				OldMutexName2 = (wchar_t*)L"Local\\{{239B7D43-86D5-4E5C-ADE6-CEC42155B475}}DingTalk_loginframe";
+				OldMutexName = (wchar_t*)L"StarCraft II Game Application";
+				OldMutexName2 = (wchar_t*)L"StarCraft II IPC Mem";
 			}
 			else
 			{
